@@ -11,6 +11,10 @@
     --space-xl: 1.5rem;
 }
 
+body{
+    font-family: "Ubuntu";
+}
+
 /* Estilos gerais para o cabeçalho */
 .site-header {
     background-color: var(--primary-color);
@@ -122,21 +126,17 @@
     padding: 0;
     margin: 0;
 }
-
 .sidebar-nav ul li {
     margin-bottom: 10px;
 }
-
 .sidebar-nav ul li a {
     color: #fff;
     text-decoration: none;
     font-size: 1rem;
 }
-
 .sidebar-nav ul li a:hover {
     text-decoration: underline;
 }
-
 .close-sidebar {
     background: none;
     border: none;
@@ -148,16 +148,83 @@
     text-align: left;
     margin-bottom: 20px;
 }
-
 .set-item {
     font-weight: bold;
 }
-
-.btn-primary{
-    background-color: #FF96A3;
-    width: 9rem;
-   
+.heroBanner{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    background: radial-gradient(101.09% 249.44% at 1.64% 69.31%, rgba(255, 150, 163, 0.3) 40%, rgba(255, 255, 255, 0.3) 100%);
+    padding: 10px;
 }
+.banner{
+    flex: 1 1 0rem; 
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;     
+}
+.heroBanner__left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.heroBanner__left > h1{
+    font-size: 5rem ;
+    max-width: 70%;
+    line-height: 4rem;
+    font-weight: bolder;
+}
+.heroBanner__left > span{
+    text-align: left;
+    max-width: 119px ;
+    font-size: 0.75rem;
+    font-weight: 400;
+    font-style: normal;
+}
+.heroBanner-btn{
+    background-color: #FF96A3;
+    width: 9rem;   
+}
+.heroBanner__right > h2{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.section-divider {
+    display: flex;
+    justify-content: center;
+    background-color: var(--primary-color);
+    padding: 1rem;
+    font-size:1rem;
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
