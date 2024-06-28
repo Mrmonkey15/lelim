@@ -193,7 +193,6 @@ body{
     font-size: 1.5rem;
     font-weight: bold;
 }
-
 .section-divider {
     display: flex;
     justify-content: center;
@@ -202,24 +201,42 @@ body{
     font-size:1rem;
     color: #fff;
 }
+.icon-container {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 10vh;
+        
+    }
+    .box-icon {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: var(--space-s);
+        width: 120px;
+    }
+    .box-icon > i {
+        color: var(--primary-color);
+        font-size: 2rem;
+    }
+    .box-icon > span {
+        color: var(--primary-color);
+        font-size: var(--space-s);
+        width: 100%; 
+        display: block;
+    }
+    .gallery{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0.5rem;
+   
+    }
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
 
 
 
