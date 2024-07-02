@@ -253,7 +253,6 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding:;
     gap: 1rem;
 }
 
@@ -520,9 +519,6 @@ input[type="email"] {
     box-sizing: border-box;
     font-size: 1em;
 }
-
-
-
 a#limpar {
     text-decoration: none;
     color: white;
@@ -531,7 +527,6 @@ a#limpar {
     transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
     margin-left: 10% ;
 }
-
 a#limpar:hover {
     text-decoration: underline;
     transform: translateY(-10px);
@@ -550,7 +545,6 @@ a#limpar:hover {
     transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;,
 
 }
-
 .submit-btn:hover{
 
     transform: translateY(-10px);
