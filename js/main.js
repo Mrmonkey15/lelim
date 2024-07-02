@@ -13,3 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
         sidebar.classList.remove('open');
     });
 });
+document.getElementById('limpar').addEventListener('click', function(event) {
+    event.preventDefault();
+    document.getElementById('form-container').reset();
+});
