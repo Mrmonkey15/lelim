@@ -164,59 +164,51 @@
                 <legend>Preencha o formulário abaixo:</legend>
                 
                 <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" required>
+                <input type="text" id="nome" name="nome" required placeholder="Digite seu nome...">
                 
                 <label for="telefone">Telefone:</label>
-                <input type="tel" id="telefone" name="telefone" required>
+                <input type="tel" id="telefone" name="telefone" required placeholder="(00) 00000-0000">
                 
                 <label for="email">E-mail:</label>
-                <input type="email" id="email" name="email" required>
-                
-                <label for="captcha">1+1:</label>
+                <input type="email" id="email" name="email" required placeholder="digite@seuemail.com">
+
+                <textarea id="mensagem" name="mensagem" placeholder="Digite sua mensagem aqui..."></textarea>
+
+                <label for="captcha">5+2:</label>
                 <input type="number" id="captcha" name="captcha" required class="captcha-insert">
                 <a href="#" id="limpar" >Limpar</a>
                 <input type="submit" class="submit-btn">
+                
 
             </fieldset>
         </form>
     </section>
     </main>
-
     <footer class="footer">
-        <div class="footer-links">
-            <a href="">Inicio</a>
-            <a href="">Sobre Nós</a>
-            <a href="">Produtos</a>
-            <a href="">Contato</a>
+        <nav class="footer-navigation">
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Sobre nós</a></li>
+                <li><a href="#">Produtos</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+        <div class="footer-logo-large">
+            <img src="/images/logo.svg" alt="Lelim Crochê">
+            <p>Desde 2018</p>
         </div>
-        <div class="footer-branding">
-            <img src="/images/logo.svg" alt="Logo da empresa" class="footer-logo">
-            <span class="footer-established">Desde 2019 &reg;</span>
-            
+        <div class="contact-info">
+            <p>Tel: (21) 9951-2106</p>
+            <p>E-mail: lelim@lelim.com.br</p>
+            <p><a href="#">Política de privacidade</a></p>
+            <p><a href="#">Termos de serviço</a></p>
         </div>
-        <address class="footer-contact">
-            <div class="footer-email-row"><p>E-mail:</p> <a href="mailto:lelim@lelim.com.br" class="footer-email">lelim@lelim.com.br</a>
-            </div>
-            <p>Tel: <a href="tel:+552199512106" class="footer-phone">(21) 9951-2106</a></p>
-            <p><a href="/politica-de-privacidade" class="footer-privacy-policy">Política de Privacidade</a></p>
-            <p><a href="/termo-de-servico" class="footer-terms">Termo de Serviço</a></p>
-        </address>
+        <div class="footer-logo">
+            <img src="/images/logo.svg" alt="Lelim Crochê">
+            <p>Desde 2018</p>
+        </div>
     </footer>
-    <span class="footer-credit">Desenvolvido por: <a href="http:www.504dev.com" class="footer-credit-link">www.504dev.com</a></span>
-    <!-- <footer class="py-3 my-4">
-        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
-          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Features</a></li>
-          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pricing</a></li>
-          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
-          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
-        </ul>
-        <p class="text-center text-body-secondary">© 2024 Company, Inc</p>
-      </footer> --> 
-
-
-
-
+    <span id="developer">Desenvolvido por:  <a href="www.504dev.com"> www.504dev.com</a></span>
     <script src="/js/main.js"></script>
 </body>
 </html>
