@@ -9,12 +9,16 @@
     --space-m: 1rem;
     --space-x: 1.25rem;
     --space-xl: 1.5rem;
-    --space-xxl
+
+}
+.background-geral{
+    background-color: red;
 }
 
-body {
+body {    
     font-family: 'Ubuntu', sans-serif;
 }
+
 
 /* Estilos gerais para o cabeçalho */
 .site-header {
@@ -158,28 +162,28 @@ body {
     font-weight: bold;
 }
 
+/*  Start- Hero-banner  */
+
 .heroBanner {
     display: flex;
     align-items: center;
-    height: 100%;
     background: radial-gradient(101.09% 249.44% at 1.64% 69.31%, rgba(255, 150, 163, 0.3) 40%, rgba(255, 255, 255, 0.3) 100%);
     padding: 10px;
-}
-
-.banner {
-    flex: 1 1 0rem;
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    text-align: center;
-    gap: 10px;
 }
 
 .heroBanner__left {
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex: 1;
 }
+.heroBanner__right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+
 
 .heroBanner__left > h1 {
     font-size: 5rem;
@@ -189,7 +193,6 @@ body {
 }
 
 .heroBanner__left > span {
-    text-align: left;
     max-width: 119px;
     font-size: 0.75rem;
     font-weight: 400;
@@ -206,6 +209,8 @@ body {
     font-weight: bold;
 }
 
+/*  Start-divider  */
+
 .section-divider {
     display: flex;
     justify-content: center;
@@ -215,6 +220,9 @@ body {
     color: #fff;
     font-weight: bold;
 }
+
+
+/* Start -  icons  */ 
 
 .icon-container {
     display: flex;
@@ -244,6 +252,9 @@ body {
     width: 100%;
     display: block;
 }
+
+/* Start -  gallery  */
+
 .gallery-container{
     padding: 1rem;
     display: flex;
@@ -283,8 +294,7 @@ body {
     border-radius: 10px;
 }
 
-
-
+/* Start -  handmade  */
 
 .handmade{
     display: flex;
@@ -300,7 +310,6 @@ body {
     font-style: bold;
     font-weight: 700;
     font-size: 3rem;
-    line-height: 3rem;
     color: #FF96A3;
 }
 
@@ -311,7 +320,6 @@ body {
     line-height: 2rem;
     text-align: justify;
 }
-/*  */
 
 .handmade__btn {
     display: flex;
@@ -340,57 +348,102 @@ body {
     background-color: rgb(255, 255, 255);
     transform: translateY(-10px);
 }
+
+/* Start -  delivery  */
+
 .delivery{
+background-color: #FF96A3;
+height: 50vh;
+padding: 3rem;
+
+}
+.delivery__container{
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.delivery__icons{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    gap: 4rem;
-    background-color: var(--primary-color);
-    padding: 3rem;
+    justify-content: space-between;
+    height: 40vh;
+}
+.delivery__icons i{
+    font-size: 2rem;
     color: white;
 }
-.delivery-row{
+.delivery__description{
     display: flex;
-    gap: 2rem   ;
-    width: 80%;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 40vh;
+    color: white;
 }
-
-.delivery-icon{
+.delivery__description strong{
     font-size: 1.5rem;
 }
 
-.feedback__container{
-    display: flex;
-    height: 20vh;
-    gap: 2rem;
+/* Start -  feedback    */
 
-    justify-content: center; 
-    align-items: center;
-    padding: 2rem;
-    margin-top: 2rem;
+.feedback{
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
+  text-align: center;  
 }
-.feedback__profile{
+.feedback__container{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex: 1 1 10rem;
+    gap: 2rem   ;
+
+
+}
+.feedback__container p {
+  
+}
+.feedback__row{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 2rem;
+    align-items: center;
+    max-width: 100%;
+    border-bottom: 1px solid var(--primary-color);
+    padding: 10px;
+}
+
+.feedback__profile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
     text-align: center;
-    gap: 1rem   ;
-    height: auto;
+    gap: 1rem;
+}
+.feedback__profile img{
+   max-width: 100%;
+   height: 100%;
+   border-radius: 50%;
 }
 
-
-.feedback__profile span {
-    font-weight: var(--space-s);
-    color: var(--primary-color);
-    font-weight: bold;
-}
 .feedback__title{
+    display: inline-block;
+    padding: 1rem;
+    max-width: 100%;
+    font-weight: 500;
+    margin: 0;
     font-style: italic;
 }
+
+/* Start - Build-kit  */
 
 .build-kit{
     display: flex;
@@ -443,7 +496,7 @@ body {
 
 
 .contact-us{
-    width: 100vw ;
+    width: 100% ;
     display: flex;
     flex-flow: column nowrap;    
 }
@@ -457,21 +510,24 @@ body {
     font-size: 3rem;
     line-height: 3rem;
     color: #FF96A3;
-    display: flex;
-    align-items: center center;
-    margin: 2rem 0 0 1rem ; 
-    
+    text-align: center;
 }
-
+.contact-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 #duvidas-form {
-
+ 
 }
 #duvidas-form fieldset{
     background-color: var(--primary-color);
     border-radius: 10px;
     padding: 2rem;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    margin: 2rem;
+    margin: 0;
+   width: 80vw;
 }
 
 
@@ -570,7 +626,7 @@ a#limpar:hover {
     padding: 1rem 1rem 1rem ;
     color: white;
     margin-top: 10rem;
-    width: 100vw;
+    max-width: 100%;
     font-size: 0.75rem;
 }
 .footer-navigation, .footer-logo, .contact-info {
@@ -608,20 +664,18 @@ a#limpar:hover {
 .footer-logo-large{
     display: none;
 }
-#developer{
-    display: inline-block;
-    text-align: center;
-    width: 100vw;
-    background-color: #ff96a2af;
-    padding: 0.75rem;
-    font-size: 0.75rem;
-    font-family: 'Ubuntu', sans-serif;
-}
 
-/* Estilos para telas maiores */
+
+
+
+
+
+
+
 
 /* Estilos para tablets */
 @media (min-width: 500px) {
+
     .main-menu {
         display: block; /* Mostrar o menu principal em telas maiores */
     }
@@ -658,5 +712,115 @@ a#limpar:hover {
         flex-direction: column;
         align-items: center;
     }
+    
+
+  .feedback__row{
+    
+      flex-direction: row;
+
+      padding:3rem
+
+  }
+  .feedback__profile{
+      width: 40vw;
+      height: 30vh;
+      text-align: center;
+      gap: 1rem;
+  }
+
+  
+  .feedback__title{
+    font-weight:100;
+    font-size: 1.75rem;
 }
 
+
+
+
+
+
+
+
+/* Estilos para telas maiores */
+
+@media(min-width: 1024px)
+{
+   
+    .heroBanner{
+        height: 30vh;
+        padding: 2rem;
+    }
+
+    .heroBanner__left > h1 {
+        font-size: 8rem;
+        max-width: 100%;
+    }
+    .heroBanner__right > h2 {
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    .section-divider {
+    padding: 3rem;
+    font-size: 2rem;
+    }
+    .icon-container {
+        height: 20vh;
+    }
+    .box-icon > i {
+    
+        font-size: 3rem;
+    }
+
+    .gallery-container{
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .gallery-row {
+        display: none;
+    }
+    .large-img{
+        width: 90%;
+        height: auto;
+    }
+    .handmade{
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: center;
+        padding: 5rem 3rem;
+        gap: var(--space-x);
+    }
+
+    .handmade__title {
+        display: block;
+        padding: 2.5rem;
+    
+    }
+
+    .handmade__description {
+    
+        font-size: var(--space-xl);
+        line-height: 2rem;
+        text-align: center;
+        width: 90%;
+    }
+    .handmade__btn {
+        padding: 2rem;
+        border-radius: 30px;
+        font-size: 1.5rem;
+    }
+
+    .handmade__btn:hover {
+        padding: 2rem;
+        border-radius: 30px;
+        font-size: 1.5rem;
+    }
+
+    .delivery{
+        padding: 5rem;
+    }
+}
