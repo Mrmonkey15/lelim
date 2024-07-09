@@ -165,52 +165,72 @@ body {
     font-weight: bold;
 }
 
-/*  Start- Hero-banner  */
+/*  Start- Hero-banner  ( usar a imagem grande acima 800px*/
 
-.heroBanner {
+.heroBanner{
+    height: 60vh;
     display: flex;
     align-items: center;
-    background: radial-gradient(101.09% 249.44% at 1.64% 69.31%, rgba(255, 150, 163, 0.3) 40%, rgba(255, 255, 255, 0.3) 100%);
-    padding: 10px;
-}
+    justify-content: center;
+    width: 100vw;
+    text-align: center; 
+    background-image: url(/images/backgroundP.webp);
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
 
-.heroBanner__left {
+   
+}
+/* aumentar gap no tablet / desktop */
+.text-container{
     display: flex;
     flex-direction: column;
+    height: 70%;
+    gap: 1.5rem   ;
     align-items: center;
-    flex: 1;
+    width: 100%;
+    padding: 2rem;    
 }
-.heroBanner__right {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex: 1;
-}
-
-
-.heroBanner__left > h1 {
-    font-size: 5rem;
-    max-width: 70%;
-    line-height: 4rem;
-    font-weight: bolder;
-}
-
-.heroBanner__left > span {
-    max-width: 119px;
-    font-size: 0.75rem;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.heroBanner-btn {
-    background-color: #FF96A3;
-    width: 9rem;
-}
-
-.heroBanner__right > h2 {
-    font-size: 1.5rem;
+.heroBanner h1{
+    font-size: 3rem;
     font-weight: bold;
 }
+.heroBanner p{
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+/* Alterar o width do btn no desktop */
+#heroBanner-btn { 
+    display: flex; /* Usar flex para alinhar o ícone e o texto */
+    align-items: center; /* Alinhar verticalmente ao centro */
+    justify-content: center; /* Alinhar horizontalmente ao centro */
+    width: 40%;
+    padding: 1rem;
+    background-color: rgb(255, 255, 255);
+    color: var(--primary-color);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Sombra intensa */
+    border-radius: 20px; 
+    text-decoration: none; /* Remover sublinhado */
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease; /* Transições suaves */
+    font-weight: 600;
+}
+
+#heroBanner-btn:hover {
+    background-color: var(--primary-color);
+    border: solid 5px var(--primary-color);
+    color: white;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.4); /* Sombra mais intensa no hover */
+    transform: translateY(-10px);
+    text-decoration: none; /* Remover sublinhado */
+    font-weight: 600;
+}
+
+/* Classe adicional para o ícone no botão */
+#heroBanner-btn .icon {
+    margin-right: 0.5rem; /* Espaçamento entre o ícone e o texto */
+    font-weight: 600;
+}
+
 
 /*  Start-divider  */
 
@@ -737,21 +757,6 @@ a#limpar:hover {
 
 @media(min-width: 1024px)
 {
-   
-    .heroBanner{
-        height: 30vh;
-        padding: 2rem;
-    }
-
-    .heroBanner__left > h1 {
-        font-size: 8rem;
-        max-width: 100%;
-    }
-    .heroBanner__right > h2 {
-        font-size: 3rem;
-        text-align: center;
-    }
-
     .section-divider {
     padding: 3rem;
     font-size: 2rem;
@@ -763,25 +768,6 @@ a#limpar:hover {
     
         font-size: 3rem;
     }
-
-    /* .gallery-container{
-        padding: 1rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 80vw;
-        margin: 0 auto;
-    }
-    .gallery-row {
-        flex-direction: row;
-     
-    } */
-    /* .large-img{
-        max-width: 800px;
-        height: auto;
-    } */
-
     .handmade{
         display: flex;
         flex-flow: column nowrap;
@@ -821,11 +807,8 @@ a#limpar:hover {
     }
     
   .feedback__row{
-    
       flex-direction: row;
-
       padding:3rem
-
   }
   .feedback__profile{
       max-width: 100%;
@@ -835,117 +818,24 @@ a#limpar:hover {
   }
   .feedback__title{
     font-weight:100;
-    font-size: 1.75rem;
-   
+    font-size: 1.75rem;  
   }
   .gallery-container{
     display: none;
   } 
 
-
-
-@media(min-width: 1200px){
-/* .gallery-container{
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    width: 80vw;
-    margin: 0 auto;
-}
-.gallery-row {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    gap: 1rem;
-    width: 100%;
-    max-width: 800px;
-    height: auto;
-    
-}
-.small-box {
-    width: 100%;
-    height: 40vh;
-    box-sizing: border-box;
+.image-container{
+    width: 60vw;
     display: flex;
     justify-content: center;
     align-items: center;
-} */
-.heroBanner{
-    
-}
-
-
-
-
-
-
-
-
-
-.gallery-desktop{
-    padding: 3rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 40vw;
-    margin: 0 auto;
-    gap: 3rem;
-}
-.img-desktop{
-    width: 100%;
-    border-radius: 20px;
+    margin: auto;
 
 }
 
-
-.kit img {
-    display: block;
-    margin: 0 auto;
-    height: auto;
-    max-height:90vw;
-    width: 45vw;
-    border-radius: 60px;
+.image-container img{
+    width: 800px;
+    height: 800px;
 }
 
-
-.build-kit h1 {
-    font-size:  07rem;
-    font-weight: bold;
-    color: var(--primary-color);
-}
-
-
-.build-kit{
-   padding: 4rem;
-   gap: 8rem    ;
-   
-}
-
-
-.kit-btn{
- width: 30rem ;
- text-align: center;
- justify-content: center;
- align-items: center;
- font-size: 2.5rem;
-}
-.kit-btn:hover{
-    width: 30rem ;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    font-size: 2.5rem;
-   }
-   
-
-
-
-
-
-
-}
 }
