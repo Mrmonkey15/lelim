@@ -18,11 +18,6 @@
 body {    
     font-family: 'Ubuntu', sans-serif;
 }
-/* hidden */
-.gallery-desktop{
-    display: none;
-}
-
 /* Estilos gerais para o cabeçalho */
 .site-header {
     background-color: var(--primary-color);
@@ -164,11 +159,30 @@ body {
 .set-item {
     font-weight: bold;
 }
+/* desktop-header */
+
+.menu-item-desktop{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.5rem;
+    font-family: 'ubuntu';
+}
+#page{
+    color:white
+}
+
+
+
+
+
+
+
 
 /*  Start- Hero-banner  ( usar a imagem grande acima 800px*/
 
 .heroBanner{
-    height: 60vh;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -189,7 +203,7 @@ body {
     gap: 1.5rem   ;
     align-items: center;
     width: 100%;
-    padding: 2rem;    
+    padding: 1.5rem;    
 }
 .heroBanner h1{
     font-size: 3rem;
@@ -198,6 +212,7 @@ body {
 .heroBanner p{
     font-size: 1.5rem;
     font-weight: 300;
+    width: 80%;
 }
 /* Alterar o width do btn no desktop */
 #heroBanner-btn { 
@@ -275,53 +290,34 @@ body {
     width: 100%;
     display: block;
 }
-
-/* Start -  gallery  */
-
-.gallery-container{
-    padding: 1rem;
+/* galeria */
+.gallery {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
-    width: 80vw;
-    margin: 0 auto;
-}
-.gallery-row {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    gap: 1rem;
-    width: 100%;
-    max-width: 800px;
-    
+    background-color: rgb(253, 193, 193);
+    padding: 4rem 0;
 }
 
-.small-box {
+.gallery-container {
+    background-color: rgb(253, 193, 193);
     width: 100%;
-    height: 23vh;
-    box-sizing: border-box;
+    gap: 1.5rem;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 1rem;
+    box-sizing: border-box;
 }
-.large-img{
-    max-width: 100%;
+
+.gallery-container img {
+    width: 100%;
+    max-width: 800px;
     height: auto;
-}
-
-.small-box img {
-    width: 100%;
-    height: 100%;
     border-radius: 10px;
-}
-
-.large-img img {
-    width: 100%;
-
-    height: 100%;
-    border-radius: 10px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Start -  handmade  */
@@ -331,8 +327,10 @@ body {
     flex-flow: column nowrap;
     align-items: center;
     justify-content: center;
-    padding: 5rem 3rem;
+    padding: 5rem 1rem;
     gap: var(--space-m);
+    width: 70vw;
+    margin: auto;
 }
 
 .handmade__title {
@@ -503,8 +501,7 @@ padding: 3rem;
 .kit-btn
     {
     display: flex;
-    gap:1rem   ;
-    place-items: center; 
+    gap:1rem;
     background-color: var(--primary-color);
     padding: 1rem;
     text-decoration: none;
@@ -553,6 +550,7 @@ padding: 3rem;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-top: 150px;
 }
 #duvidas-form fieldset{
     background-color: var(--primary-color);
@@ -584,7 +582,7 @@ label {
     border-radius: 10px;
     box-sizing: border-box;
     font-size: 1em;
-    width: 3rem
+    width: 3rem;
 }
 input[type="text"],
 input[type="tel"],
@@ -621,7 +619,7 @@ input[type="email"]:focus {
     font-size: 1em;
     height: 10rem;
 }
-a#limpar {
+#limpar {
     text-decoration: none;
     color: white;
     font-size: 0.9em;
@@ -629,7 +627,7 @@ a#limpar {
     transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
     margin-left: 10% ;
 }
-a#limpar:hover {
+#limpar:hover {
     text-decoration: underline;
     transform: translateY(-10px);
 }
@@ -699,7 +697,15 @@ a#limpar:hover {
     display: none;
 }
 
-
+#developer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    background-color: #f1b0b8;
+    padding: 10px;
+    gap: 1rem   ;
+}
 
 
 
@@ -750,24 +756,77 @@ a#limpar:hover {
 
 
 
-
+}
 
 
 /* Estilos para telas maiores */
 
 @media(min-width: 1024px)
 {
+    .site-header {
+        font-size: 1.25rem;
+        color: black;
+    }
+    #main-icon{
+        color: white;
+        font-weight: bold;
+    }
+
+    .heroBanner{
+        height: 70vh;
+        background-image: url(/images/background.webp);
+        background-size:contain;
+        background-position: right;
+        background-repeat: no-repeat;
+    }
+
+    .text-container{
+   
+        height: auto;
+        gap: 4rem   ;
+        align-items: center;
+        width: 100%;
+        padding: 1.5rem;  
+        justify-content: space-evenly; 
+    }
+    .heroBanner h1{
+        font-size: 5rem;
+        font-weight: bold;
+    }
+
+    .heroBanner p{
+        font-size: 2.5rem;
+        font-weight: 300;
+    }
+
+    #heroBanner-btn { 
+        display: flex; /* Usar flex para alinhar o ícone e o texto */
+        align-items: center; /* Alinhar verticalmente ao centro */
+        justify-content: center; /* Alinhar horizontalmente ao centro */
+        width: 30%;
+        padding: 2rem;
+        border-radius: 20px; 
+        font-size: 2rem;
+        background-color: var(--primary-color);
+        color: #fff;
+    }
+    #heroBanner-btn:hover{
+        color: var(--primary-color);
+        background-color: #fff;
+        border: none;
+    }
+
     .section-divider {
-    padding: 3rem;
-    font-size: 2rem;
+    padding: 3.5rem;
+    font-size: 3rem;
     }
     .icon-container {
         height: 20vh;
     }
     .box-icon > i {
-    
         font-size: 3rem;
     }
+
     .handmade{
         display: flex;
         flex-flow: column nowrap;
@@ -779,7 +838,8 @@ a#limpar:hover {
 
     .handmade__title {
         display: block;
-        padding: 2.5rem;
+        padding: 3rem;
+        font-size: 5rem;
     
     }
 
@@ -801,41 +861,122 @@ a#limpar:hover {
         border-radius: 30px;
         font-size: 1.5rem;
     }
-
     .delivery{
-        padding: 5rem;
+        padding: 3rem;
+        height: 70vh;
+    }
+    .delivery__icons i{
+        font-size: 3rem;
+        color: white;
+    }
+    .delivery__description strong{
+        font-size: 2rem;
+        text-align: center;
+    }
+    .feedback__row{
+        flex-direction: row;
+        padding:3rem
+    }
+    .feedback__profile{
+        max-width: 100%;
+        height: 30vh;
+        text-align: center;
+        gap: 1rem;
+    }
+    .feedback__title{
+        font-weight:100;
+        font-size: 1.75rem;  
+    }
+  
+    .build-kit{
+        display: flex;
+        align-items: center;
+        justify-items: center;
+        flex-direction: column;
+        gap:3rem;
+        margin: 3rem 0;
+        max-height: fit-content;
+       
+    }
+    .build-kit h1 {
+        font-size:  5rem;
+        font-weight: bold;
+        color: var(--primary-color);
     }
     
-  .feedback__row{
-      flex-direction: row;
-      padding:3rem
-  }
-  .feedback__profile{
-      max-width: 100%;
-      height: 30vh;
-      text-align: center;
-      gap: 1rem;
-  }
-  .feedback__title{
-    font-weight:100;
-    font-size: 1.75rem;  
-  }
-  .gallery-container{
-    display: none;
-  } 
-
-.image-container{
-    width: 60vw;
+    .kit img {
+        display: block;
+        margin: 0 auto;
+        height: auto;
+        width: 100%;
+        border-radius: 60px;
+    }
+.build-kit{
     display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
+    gap: 5rem;
+    margin: 3rem 0;
+    max-height: fit-content;
+   
+}
+.kit-btn
+    {
+    display: flex;
+    gap:1rem   ;
     justify-content: center;
     align-items: center;
-    margin: auto;
+    background-color: var(--primary-color);
+    padding: 1rem;
+    width: 50%;
+    font-size: 2rem;
+    }
 
+
+
+.contact-us h1 {
+    padding: 3rem  ;
+    display: block;
+    width: 45vw;
+    text-align: left ;
+    font-size: 4rem;
+ 
 }
 
-.image-container img{
-    width: 800px;
-    height: 800px;
+#limpar {
+    text-decoration: underline;
+    color: white;
+    font-size: 1.2em;
+    margin-left:5% ;
 }
+.submit-btn{
+width: 40%;
+margin: 0 auto;
 
+}
+.footer-navigation ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+}
+.contact-info {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: end ;
+   height: 100%;
+   margin: 0;
+   height: 144px;
+}
+.contact-info a {
+    font-size: 1rem;
+ }
+ .footer-logo-large{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    margin: 0 auto;
+}
 }

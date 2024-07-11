@@ -1,0 +1,119 @@
+/* CSS geral aqui... */
+
+/* Estilos para dispositivos com largura mínima de 800px */
+@media (min-width: 800px) {
+    .main-menu {
+        display: block; /* Mostrar o menu principal em telas maiores */
+    }
+
+    .mobile-menu-toggle {
+        display: none; /* Ocultar o ícone do menu mobile em telas maiores */
+    }
+
+    .container {
+        padding: 0 var(--space-xl);
+    }
+
+    .heroBanner {
+        height: 70vh;
+    }
+
+    .text-container {
+        gap: 2rem;
+        padding: 3rem;
+    }
+
+    #heroBanner-btn {
+        width: 30%;
+    }
+
+    .icon-container {
+        height: 15vh;
+        margin: 2rem;
+    }
+
+    .gallery-container {
+        width: 70vw;
+    }
+
+    .gallery-row {
+        max-width: 1000px;
+    }
+
+    .handmade {
+        padding: 6rem 4rem;
+        gap: var(--space-xl);
+    }
+
+    .handmade__title {
+        font-size: 4rem;
+    }
+
+    .handmade__description {
+        font-size: var(--space-xl);
+        line-height: 2.5rem;
+    }
+
+    .delivery {
+        height: 60vh;
+    }
+
+    .delivery__container {
+        gap: 3rem;
+    }
+}
+
+/* Estilos para dispositivos com largura mínima de 1200px */
+@media (min-width: 1200px) {
+    .container {
+        padding: 0 var(--space-xl);
+    }
+
+    .heroBanner {
+        height: 80vh;
+    }
+
+    .text-container {
+        gap: 2.5rem;
+        padding: 4rem;
+    }
+
+    #heroBanner-btn {
+        width: 25%;
+    }
+
+    .icon-container {
+        height: 20vh;
+        margin: 3rem;
+    }
+
+    .gallery-container {
+        width: 60vw;
+    }
+
+    .gallery-row {
+        max-width: 1200px;
+    }
+
+    .handmade {
+        padding: 8rem 5rem;
+        gap: 2rem;
+    }
+
+    .handmade__title {
+        font-size: 5rem;
+    }
+
+    .handmade__description {
+        font-size: 2rem;
+        line-height: 3rem;
+    }
+
+    .delivery {
+        height: 70vh;
+    }
+
+    .delivery__container {
+        gap: 4rem;
+    }
+}

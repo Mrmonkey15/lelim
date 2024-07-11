@@ -1,52 +1,61 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Image Container</title>
-    <style>
-        .image-container {
-            display: flex;
-            flex-direction: column;
-            flex-wrap: nowrap;
-            justify-content: center;
-            align-items: center ;
-            width: 100;
-            margin: 0 auto;
-        }
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  </head>
+  <style>
+.gallery {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(253, 193, 193);
+}
 
-        .image-container img {
-            border-radius: 20%;
-            width: 100%;
-            margin: 10px;
-            box-sizing: border-box;
-        }
+.gallery-container {
+    background-color: rgb(253, 193, 193);
+    width: 100%;
+    gap: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    box-sizing: border-box;
+}
 
-        /* Mobile - Default */
-        .image-container img {
-            flex: 1 1 100%;
-        }
+.gallery-container img {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+}
 
-        /* Min 500px */
-        @media (min-width: 500px) {
-            .image-container img {
-                flex: 1 1 calc(50% - 20px);
-            }
-        }
+@media (min-width: 500px) {
+    .gallery-container {
+        width: 60vw;
+        gap: 3rem;
+        padding: 2rem;
+    }
+}
 
-        /* Min 750px */
-        @media (min-width: 750px) {
-            .image-container img {
-                flex: 1 1 calc(33.333% - 20px);
-            }
-        }
-    </style>
-</head>
-<body>
-    <div class="image-container">
-        <img src="image1.jpg" alt="Image 1">
-        <img src="image2.jpg" alt="Image 2">
-        <img src="image3.jpg" alt="Image 3">
-    </div>
-</body>
+  </style>
+  <body>
+    <section class="gallery">
+        <div class="gallery-container">
+          <img src="/images/produto1.webp" alt="">
+          <img src="/images/produto2.webp" alt="">
+          <img src="/images/produto3.webp" alt="">
+          <img src="/images/produto4.webp" alt="">
+          
+        </div>
+    </section>
+  </body>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
 </html>
