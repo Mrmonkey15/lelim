@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (captchaValue === 7) { 
             form.submit();
         } else {
-            alert('Erro na validação, tente novamente.');
+            alert('Erro na validação, tente novamente. Digite o resultado correto');
             captchaInput.classList.add('captcha-error');
             captchaInput.value = '';
             captchaInput.focus();
@@ -46,3 +46,22 @@ document.getElementById('limpar').addEventListener('click', function(event) {
     event.preventDefault();
     document.getElementById('form-container').reset();
 });
+
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const sidebar = document.querySelector('.sidebar');
+        const closeBtn = document.querySelector('.close-sidebar');
+        const contactLink = document.querySelector('.contact-link');
+
+        // Função para fechar a sidebar
+        function closeSidebar() {
+            sidebar.classList.remove('open');
+        }
+
+        // Evento de clique para o botão de fechar
+        closeBtn.addEventListener('click', closeSidebar);
+
+        // Evento de clique para o link de contato
+        contactLink.addEventListener('click', closeSidebar);
+    });
+

@@ -174,11 +174,6 @@ body {
 
 
 
-
-
-
-
-
 /*  Start- Hero-banner  ( usar a imagem grande acima 800px*/
 
 .heroBanner{
@@ -452,20 +447,26 @@ padding: 3rem;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 30vw;
-    height: 100%;
+    width: 8rem;
+    height: auto;
     text-align: center;
     gap: 1rem;
 }
 .feedback__profile img{
-   max-width: 100%;
+   display: block;
+   margin: 0 auto;
+    max-width: 100%;
    height: 100%;
    border-radius: 50%;
+   
+ 
 }
+
 
 .feedback__title{
     display: inline-block;
     padding: 1rem;
+    width: 70vw;
     max-width: 100%;
     font-weight: 500;
     margin: 0;
@@ -707,14 +708,33 @@ input[type="email"]:focus {
     gap: 1rem   ;
 }
 
+@media (min-width: 500px) {
+    
+    .main-menu {
+        display: block; /* Mostrar o menu principal em telas maiores */
+    }
 
+    .mobile-menu-toggle {
+        display: none; /* Ocultar o ícone do menu mobile em telas maiores */
+    }
+
+    .sidebar {
+        display: none; /* Ocultar a sidebar em telas maiores */
+    }
+
+    .footer {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start; /* Alinhamento superior para conteúdo não centralizado */
+    }
+}
 
 
 
 
 
 /* Estilos para tablets */
-@media (min-width: 500px) {
+@media (min-width: 700px) {
 
     .main-menu {
         display: block; /* Mostrar o menu principal em telas maiores */
@@ -753,6 +773,49 @@ input[type="email"]:focus {
         align-items: center;
     }
     
+    .heroBanner{
+        background-image: url(/images/background.webp);
+        background-size:contain;
+        background-position: right;
+        background-repeat: no-repeat;
+        height: 50vh;
+    }
+
+    .text-container{
+   
+        max-height: 100%;
+        gap: 1rem   ;
+        align-items: center;
+        width: 100%;
+        padding: 0;  
+        justify-content: space-evenly; 
+    }
+    .heroBanner h1{
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+    .heroBanner p{
+        font-size: 1.5rem;
+        font-weight: 400;
+    }
+
+    #heroBanner-btn { 
+        display: flex; /* Usar flex para alinhar o ícone e o texto */
+        align-items: center; /* Alinhar verticalmente ao centro */
+        justify-content: center; /* Alinhar horizontalmente ao centro */
+        width: 30%;
+        padding: 1rem;
+        border-radius: 20px; 
+        font-size: 1rem;
+        background-color: var(--primary-color);
+        color: #fff;
+    }
+    #heroBanner-btn:hover{
+        color: var(--primary-color);
+        background-color: #fff;
+        border: none;
+    }
 
 
 
@@ -774,7 +837,6 @@ input[type="email"]:focus {
 
     .heroBanner{
         height: 70vh;
-        background-image: url(/images/background.webp);
         background-size:contain;
         background-position: right;
         background-repeat: no-repeat;
@@ -796,7 +858,7 @@ input[type="email"]:focus {
 
     .heroBanner p{
         font-size: 2.5rem;
-        font-weight: 300;
+        font-weight: 400;
     }
 
     #heroBanner-btn { 
@@ -804,7 +866,7 @@ input[type="email"]:focus {
         align-items: center; /* Alinhar verticalmente ao centro */
         justify-content: center; /* Alinhar horizontalmente ao centro */
         width: 30%;
-        padding: 2rem;
+        padding: 1.5rem;
         border-radius: 20px; 
         font-size: 2rem;
         background-color: var(--primary-color);
@@ -834,6 +896,7 @@ input[type="email"]:focus {
         justify-content: center;
         padding: 5rem 3rem;
         gap: var(--space-x);
+        height: 100vh;
     }
 
     .handmade__title {
@@ -845,8 +908,8 @@ input[type="email"]:focus {
 
     .handmade__description {
     
-        font-size: var(--space-xl);
-        line-height: 2rem;
+        font-size: 1.75rem;
+        line-height: 3rem;
         text-align: center;
         width: 90%;
     }
@@ -879,7 +942,6 @@ input[type="email"]:focus {
     }
     .feedback__profile{
         max-width: 100%;
-        height: 30vh;
         text-align: center;
         gap: 1rem;
     }
