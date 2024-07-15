@@ -812,7 +812,7 @@ input[type="email"]:focus {
     }
     
     .heroBanner{
-        background-image: url(/images/background.webp);
+        background-image: url(images/background.webp);
         background-size:contain;
         background-position: right;
         background-repeat: no-repeat;
