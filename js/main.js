@@ -65,3 +65,21 @@ document.getElementById('limpar').addEventListener('click', function(event) {
         contactLink.addEventListener('click', closeSidebar);
     });
 
+
+
+    const form = document.getElementById('duvidas-form');
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Impede o envio do formulário
+    
+        // Verifica se o formulário é válido
+        if (form.checkValidity()) {
+            alert("Obrigado por enviar o formulário! Entraremos em contato em breve.");
+            form.submit(); // Envia o formulário se todos os campos estiverem preenchidos corretamente
+        } else {
+            alert("Por favor, preencha todos os campos corretamente.");
+            // Se o formulário não for válido, exibe as mensagens de erro padrão do HTML5
+            form.reportValidity();
+        }
+    });
+    

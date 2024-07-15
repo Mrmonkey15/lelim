@@ -1,61 +1,205 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  </head>
-  <style>
-.gallery {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(253, 193, 193);
-}
-
-.gallery-container {
-    background-color: rgb(253, 193, 193);
-    width: 100%;
-    gap: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
-    box-sizing: border-box;
-}
-
-.gallery-container img {
-    width: 100%;
-    max-width: 800px;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-@media (min-width: 500px) {
-    .gallery-container {
-        width: 60vw;
-        gap: 3rem;
-        padding: 2rem;
-    }
-}
-
-  </style>
-  <body>
-    <section class="gallery">
-        <div class="gallery-container">
-          <img src="/images/produto1.webp" alt="">
-          <img src="/images/produto2.webp" alt="">
-          <img src="/images/produto3.webp" alt="">
-          <img src="/images/produto4.webp" alt="">
-          
-        </div>
-    </section>
-  </body>
-
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+<html lang=pt-br>
+<head>
+<meta charset=UTF-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=description content="Descubra a beleza artesanal em fio de malha na nossa loja online. Criamos peças únicas e personalizadas, como tapetes, cestos e acessórios decorativos, feitos à mão com amor e dedicação. Explore nossa coleção e encontre o presente perfeito para decorar seu lar com estilo e sustentabilidade.">
+<title>Lelim - Arte em Fio de Malha</title>
+<link rel=icon type=image/png sizes=32x32 href=/favicons/favicon-32x32.png>
+<meta name=msapplication-TileColor content=#ffffff>
+<meta name=theme-color content=#ffffff>
+<link rel=stylesheet href=/css/refatoracao.css>
+<link rel=stylesheet href=css/normalize.css>
+<link href=https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css rel=stylesheet integrity=sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH crossorigin=anonymous>
+<script src=https://kit.fontawesome.com/04394fbfdb.js crossorigin=anonymous></script>
+</head>
+<body>
+<header class=site-header>
+<div class=container>
+<div class=mobile-menu-toggle>
+<button class=burger-menu aria-label=Menu>
+<i class="fa-sharp fa-solid fa-bars"></i>
+</button>
+</div>
+<div class=logo>
+<a href=#><img src=/images/logo.svg alt="logo marca lelim"></a>
+</div>
+<div class=header-content>
+<nav class=main-menu>
+<ul>
+<li><a href=# class=menu-item-desktop id=page>Início</a></li>
+<li><a href=/about.html class=menu-item-desktop>Sobre</a></li>
+<li><a href=#contact-section class=menu-item-desktop>Contato</a></li>
+<li><a href=https://wa.me/c/5521981861182 class=menu-item-desktop>Produtos</a></li>
+</ul>
+</nav>
+</div>
+</div>
+</header>
+<div class=sidebar>
+<nav class=sidebar-nav>
+<button class=close-sidebar aria-label="Fechar Menu">
+<i class="fas fa-times"></i>
+</button>
+<ul>
+<li class="menu-item set-item">Início</li>
+<li class=menu-item><a href=/about.html>Sobre</a></li>
+<li class="menu-item contact-link"><a href=#contact-section>Contato</a></li>
+<li><a href=https://wa.me/c/5521981861182 class=menu-item>Produtos</a></li>
+</ul>
+</nav>
+</div>
+<main>
+<section class=heroBanner>
+<div class=text-container>
+<h1>Bem-vindo à Lelim</h1>
+<p>Descubra a beleza da arte em fio de malha, onde cada peça conta uma história. Cada item é único, feito para inspirar e encantar.</p>
+<a href="https://api.whatsapp.com/send?phone=5521981861182&text=Ol%C3%A1,%20estou%20no%20site%20da%20Lelim%20e%20desejo%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20seus%20produtos.%20Poderia%20me%20ajudar,%C2%A0por%C2%A0favor?" id=heroBanner-btn><i class="fa-brands fa-whatsapp icon"></i>Peça já</a>
+</div>
+</section>
+<div class=section-divider>Nossos Produtos</div>
+<div class=icon-container>
+<div class=box-icon>
+<i class="fa-solid fa-house-chimney-window container__ico"></i>
+<span>Casa & Decor</span>
+</div>
+<div class=box-icon>
+<i class="fa-solid fa-bag-shopping"></i>
+<span>Bolsas</span>
+</div>
+<div class=box-icon>
+<i class="fa-solid fa-gift"></i>
+<span>Presentes</span>
+</div>
+<div class=box-icon>
+<i class="fa-solid fa-baby-carriage"></i>
+<span>Baby</span>
+</div>
+</div>
+<section class=gallery>
+<div class=gallery-container>
+<img src=/images/produto1.webp alt="Cesto de crochê artesanal em fio de malha laranja e branco. Perfeito para organizar seus pertences ou decorar sua casa. Encontre mais peças incríveis em nosso site">
+<img src=/images/produto2.webp alt="Cesto e coração coloridos de crochê ao lado de uma planta verde em uma mesa de madeira. O cesto é feito de fio de malha laranja, amarela e verde e tem uma alça de couro marrom. O coração é feito de fio de malha vermelha e tem um botão branco no centro.">
+<img src=/images/produto3.webp alt="Cesto azul e branco vibrantes repousam sobre uma mesa de madeira ao lado de uma planta verde. O cesto é feito de uma mistura harmoniosa de fios laranja, amarelo e verde, adornado com uma alça robusta de couro marrom.">
+<img src=/images/produto4.webp alt="Um arco com um laço em cima. A acrco é feita de um material macio e elástico e tem uma largura de cerca de 2 cm. O laço é feito do mesmo material que a faixa de cabeça e está localizado no topo da faixa de cabeça. O laço tem cerca de 5 cm de largura e 3 cm de altura. A faixa de cabeça é perfeita para usar em esportes, exercícios ou em dias casuais.">
+</div>
+</section>
+<section class=handmade>
+<h1 class=handmade__title>Feitos à mão, do seu jeito!</h1>
+<p class=handmade__description>Todos os produtos usam fios de qualidade escolhidos cuidadosamente para garantir durabilidade e beleza em cada peça. Cada item é único, garantindo beleza e exclusividade.</p>
+</section>
+<section class=delivery>
+<div class=delivery__container>
+<div class=delivery__icons>
+<i class="fa-solid fa-truck delivery-icon"></i>
+<i class="fa-solid fa-dolly delivery-icon"></i>
+<i class="fa-regular fa-credit-card delivery-icon"></i>
+<i class="fa-brands fa-pix delivery-icon"></i>
+</div>
+<div class=delivery__description>
+<strong>Entregamos em todo o Brasil</strong>
+<strong>Entrega garantida!</strong>
+<strong>Até 5x no cartão</strong>
+<strong>5% de desconto, via pix</strong>
+</div>
+</div>
+</section>
+<section class=feedback>
+<div class=feedback__container>
+<div class=feedback__row>
+<div class=feedback__profile>
+<img src=/images/cliente3.jpg alt="Foto de cliente">
+<span>Cinthia França</span>
+</div>
+<p class=feedback__title>"Encomendei um kit baby e fiquei encantada com tanto capricho. Ele foi todo personalizado nas cores e tamanhos que pedi, sem falar no cheirinho maravilhoso que vem."</p>
+</div>
+<div class=feedback__row>
+<div class=feedback__profile>
+<img src=/images/cliente4.jpg alt="foto de cliente">
+<span>Tatiane Nascimento</span>
+</div>
+<p class=feedback__title>"Já adquiri vários itens para mim e para minha filha. Tem muita variedade. Já fiz lembrançinhas para aniversário dela, ficaram perfeitas. Amo a marca."</p>
+</div>
+<div class=feedback__row>
+<div class=feedback__profile>
+<img src=/images/cliente2.jpg alt="Foto de cliente">
+<span>Carolina Silva</span>
+</div>
+<p class=feedback__title>"Já comprei várias peças, são impecáveis, ótima qualidade e dá pra ver o capricho. Sempre vem brinde! Ameiii."</p>
+</div>
+<div class=feedback__row>
+<div class=feedback__profile>
+<img src=/images/cliente1.jpg alt="foto de cliente">
+<span>Jonas Azevedo</span>
+</div>
+<p class=feedback__title>"Eu comprei um kit escritório e amei. Chegou muito rápido, tem ótima qualidade."</p>
+</div>
+</div>
+</section>
+<section class=build-kit>
+<h1 class=kit-title>Monte seu kit</h1>
+<div class=kit>
+<img src=/images/kitbanner.webp alt="As cestas feitas de fio de crochê macio e são de diferentes tamanhos e formas. As alças de couro são grossas e duráveis e o pingente de coração é um toque decorativo. As cestas são perfeitas para armazenar pequenos itens ou para usar como decoração." class=kit-img>
+</div>
+<a href="https://api.whatsapp.com/send?phone=5521981861182&text=Ol%C3%A1,%20estou%20no%20site%20da%20Lelim%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20kits%20de%20montagem.%20Pode%20me%20dar%20mais%20informa%C3%A7%C3%B5es?" class="handmade__btn kit-btn">Monte aqui</a>
+</section>
+<section class=contact-us id=contact-section>
+<div class=contact-container>
+<h1 class=contact-us>Dúvidas?</h1>
+<form action=https://api.staticforms.xyz/submit method=post id=duvidas-form>
+<fieldset>
+<legend>Preencha o formulário abaixo:</legend>
+<label for=nome>Nome:</label>
+<input id=nome name=name required placeholder="Digite seu nome...">
+<label for=telefone>Telefone:</label>
+<input type=tel id=telefone name=phone required placeholder="(00) 00000-0000">
+<label for=email>E-mail:</label>
+<input type=email id=email name=email required placeholder=digite@seuemail.com>
+<textarea id=mensagem name=message placeholder="Digite sua mensagem aqui..."></textarea>
+<label for=captcha>5+2:</label>
+<input type=number id=captcha name=captcha required class=captcha-insert>
+<a href=# id=limpar>Limpar</a>
+<input type=submit class=submit-btn id=thanks-btn>
+<input type=hidden name=accessKey value=5e62acdf-6887-4a36-8160-00690b07c83c>
+<input type=hidden name=redirectTo value=http://127.0.0.1:5500/index.html>
+</fieldset>
+</form>
+</div>
+</section>
+<section class=social-media>
+<div class=social__container>
+<h1>Acompanhe nossas novidades no Instagram!</h1>
+<div class=media>
+<a href="https://www.instagram.com/lelimcroche?igsh=Y3hmMHRka283OWdt"><i class="fa-brands fa-instagram media-icon" id=insta__icon></i></a>
+<a href="https://www.instagram.com/lelimcroche?igsh=Y3hmMHRka283OWdt" id=insta>@lelimcroche</a>
+</div>
+</div>
+</section>
+<footer class=footer>
+<nav class=footer-navigation>
+<ul>
+<li><a href=#>Início</a></li>
+<li><a href=/about.html>Sobre nós</a></li>
+<li><a href=https://wa.me/c/5521981861182>Produtos</a></li>
+</ul>
+</nav>
+<div class=footer-logo-large>
+<img src=/images/logo.svg alt="Lelim Crochê">
+<p>Desde 2018</p>
+</div>
+<div class=contact-info>
+<p>Tel: (21) 98186-1182</p>
+<p>E-mail: lelim@lelim.com.br</p>
+<p><a href=#>Política de privacidade</a></p>
+<p><a href=#>Termos de serviço</a></p>
+</div>
+<div class=footer-logo>
+<img src=/images/logo.svg alt="Lelim Crochê">
+<p>Desde 2018</p>
+</div>
+</footer>
+</main>
+<span id=developer>Desenvolvido por: <a href=www.504dev.com>www.504dev.com</a></span>
+<script src=/js/main.js></script>
+</body>
 </html>

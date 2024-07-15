@@ -292,7 +292,7 @@ body {
     justify-content: center;
     align-items: center;
     background-color: rgb(253, 193, 193);
-    padding: 4rem 0;
+    padding: 1rem 0;
 }
 
 .gallery-container {
@@ -651,6 +651,42 @@ input[type="email"]:focus {
 .captcha-error {
     outline: 3px solid red;
 }
+.social__container{
+    width: 80vw;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 2rem;
+    
+    gap: 1.75rem   ;
+}
+.media{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.social__container h1{
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 300;
+}
+.media-icon{
+    font-size: 4rem;
+    color: var(--primary-color);
+}
+#insta{
+    text-decoration: none;
+    font-size: 1.75rem ;
+    color: var(--primary-color);
+}    
+
+
+
+
+
  .footer {
     display: flex;
     flex-direction: column;
@@ -658,7 +694,7 @@ input[type="email"]:focus {
     background-color: var(--primary-color);
     padding: 1rem 1rem 1rem ;
     color: white;
-    margin-top: 10rem;
+    /* margin-top: 10rem; */
     max-width: 100%;
     font-size: 0.75rem;
 }
@@ -1003,9 +1039,8 @@ input[type="email"]:focus {
     width: 45vw;
     text-align: left ;
     font-size: 4rem;
- 
-}
 
+}
 #limpar {
     text-decoration: underline;
     color: white;
@@ -1015,7 +1050,6 @@ input[type="email"]:focus {
 .submit-btn{
 width: 40%;
 margin: 0 auto;
-
 }
 .footer-navigation ul li a {
     text-decoration: none;
