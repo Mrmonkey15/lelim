@@ -186,7 +186,7 @@ body {
     width: 100vw;
     text-align: center; 
     background-image: url('images/backgroundP.webp');
-    background-size:cover;
+    background-size:contain;
     background-position: center;
     background-repeat: no-repeat;
 
@@ -813,7 +813,7 @@ input[type="email"]:focus {
     
     .heroBanner{
         
-        background-size:cover;
+        background-size:contain;
         background-position: right;
         background-repeat: no-repeat;
         height: 50vh;
