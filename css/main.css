@@ -176,7 +176,7 @@ body {
 
 
 
-/*  Start- Hero-banner  ( usar a imagem grande acima 800px*/
+
 
 .heroBanner{
     height: auto;
@@ -813,7 +813,7 @@ input[type="email"]:focus {
     
     .heroBanner{
         
-        background-size:contain;
+        background-size:cover;
         background-position: right;
         background-repeat: no-repeat;
         height: 50vh;
